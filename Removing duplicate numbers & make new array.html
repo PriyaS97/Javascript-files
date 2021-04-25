@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Removing duplicate numbers & make new array </title>
+</head>
+
+<body>
+
+
+    <script>
+//Set object provided by ES6. A set is a collection of items which are unique i.e no element can be repeated.
+
+
+
+        //one way        
+        let a = ["Mike", "Matt", "Nancy", "Adam", "Jenny", "Nancy", "Carl"];
+        let b = [];
+        let len = a.length;
+        for (let i = 0; i <= len; i++) {
+            if (b.indexOf(a[i]) === -1) {
+                b.push(a[i]);
+            }
+        }
+
+        document.write(b + '<br>');
+
+
+        //second way 
+
+        /*
+        Sorting is generally understood to be the process of re-arranging a given set of objects in a specific order.
+        */
+
+
+
+        // let names = ["Mike", "Matt", "Nancy", "Adam", 'Adam'];
+        // let names1 = [];
+        // let len = names.length;
+        // names.sort();
+        // let _temp;
+        // for (let i = 0; i < len; i++) {
+        //     if (names[i] !== _temp) {
+        //         names1.push(names[i]);
+        //         _temp = names[i]
+        //     }
+        // }
+        // document.write(names1 + '<br>');
+
+
+       // var nums =  ["Mike", "Matt", "Nancy", "Adam", 'Adam'];
+        var Set1=new Set(["Mike", "Matt", "Nancy", "Adam", 'Adam']);
+
+        // document.write(Set)
+        Set1.forEach((e)=> document.write(e))
+        
+        // console.log(Set1);
+
+    </script>
+</body>
+
+</html>

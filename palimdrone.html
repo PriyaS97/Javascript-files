@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>palimdrome string </title>
+</head>
+
+<body>
+    <script>
+        //length : it will coutnt number of character 
+        let str = "121";
+        let revstr = "";
+       
+        for (let i = str.length - 1; i >= 0; i--) {
+            revstr = revstr + str[i];
+            // revstr +=str[i];
+             
+        }
+        if (str === revstr) {
+            alert('given number is palimdrome');
+        } else {
+            alert('given number not  is palimdrome');
+        }
+        document.write(revstr);
+
+
+
+
+
+        //second way of palindrome
+        // program to check if the string is palindrome or not
+
+        function checkPal(string) {
+            debugger;
+            // find the length of a string
+            const len = string.length;
+           
+            // loop through half of the string
+            for (let i = 0; i < len / 2; i++) {
+
+                // check if first and last string are same
+                if (string[i] !== string[len - 1 - i]) {
+                    return 'It is not a palindrome';
+                }
+            }
+            return 'It is a palindrome';
+        }
+        alert(checkPal(str));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>print 10 digit alphnumeric </title>
+</head>
+
+<body>
+
+    <!-- <button onclick="generateString()">Click</button> -->
+    <script>
+
+        // program to generate random strings
+
+        // declare all characters
+        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+
+        function generateString(length) {
+
+            var button = document.createElement("button");
+            button.innerText = ' click it';
+         //   button.onclick = function generateString() {
+
+
+                var body = document.getElementsByTagName("body");
+                body[0].appendChild(button);
+                let result = ' ';
+                const charactersLength = characters.length;
+                for (let i = 0; i < length; i++) {
+                    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+                }
+
+                return result;
+            //}
+        }
+
+        document.write(generateString(10));
+
+
+
+
+        // let up = document.getElementById('demo');
+        // let down = document.getElementById('demo1');
+        // up.innerHTML=          'Click on the button to generate alpha-numeric string';
+
+        // function randomStr(len, arr) {
+        //     var ans= "";
+        //     for (var i=len; i>0; i--){
+        //         ans+=
+        //         arr[math.floor(Math.random()*arr.length)];
+        //     }
+        //     return ans;
+
+        // }
+
+
+
+        // function myfunction() {
+
+        //     down.innerHTM=Math.random().toString(36).slice(2);
+            //              Math.random().toString(36).slice(2);
+
+           // num1.innerHTML = randomStr(20, '12345abcde');
+
+            // var digits = Math.floor(Math.random() * 9000000000) + 1000000000;
+            // document.getElementById('demo').innerHTML = digits
+            // document.write(digits);
+
+
+     //   }
+    </script>
+</body>
+
+</html>

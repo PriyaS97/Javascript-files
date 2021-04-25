@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .blink {
+            background: gold;
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+<!--  
+  const blinkTimer = (n) => {
+    for (let i = 1; i <= n; i++) {
+      setTimeout(() => {
+
+        var span = document.createElement("span");
+        span.innerText = i;
+        span.setAttribute("id", i);
+        span.classList.add("blink");
+        var body = document.getElementsByTagName("body");
+        body[0].appendChild(span);
+        setTimeout(() => {
+          span.classList.remove("blink");
+        }, 1000);
+      }, i * 2000);
+    }
+  }
+  blinkTimer(10);
+ -->
+<script>
+    const blinkTimer = (n) => {
+      //  debugger;
+        for (let  i = 1; i <= n; i++) {
+            setTimeout(() => {
+
+
+                var span = document.createElement("span");
+                span.innerText = i;
+                span.setAttribute('id', i);
+                span.classList.add("blink");
+                var body = document.getElementsByTagName("body");
+                body[0].appendChild(span);
+                setTimeout(() => {
+                    span.classList.remove("blink");
+                }, 1000);
+            }, i * 2000);
+        }
+    }
+    blinkTimer(10);
+
+</script>
+
+</html>

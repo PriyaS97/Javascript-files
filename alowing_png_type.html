@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>png_validation </title>
+    <style>
+div{
+    margin: 20px;
+}
+    </style>
+</head>
+
+<body>
+    <form>
+        <div>
+            <label for="file">Attach file</label></br>
+            <input type="file" id="file" name="file" required>
+            <span id="err"></span>
+        </div>
+        <div>
+            <button type="submit" onclick="validation(event)"> Submit</button>
+            <span id="sub"></span>
+        </div>
+
+    </form>
+    <script>
+        function validation(e) {
+            e.preventDefault()
+            let choosefile = document.getElementById('file');
+            let error = document.getElementById('err');
+            let sub = document.getElementById('sub');
+            //document.write(extention)
+
+            let extention = choosefile.value.split('.');
+            if (extention[1] == 'png' || extention[1] == 'jpg') {
+              //  alert('right format');
+              sub.innerText='right format';
+            }
+            else {
+               // alert('wrong format');
+               sub.innerText='wrong format';
+            }
+
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

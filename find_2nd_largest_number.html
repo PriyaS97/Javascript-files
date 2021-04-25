@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2nd largest number</title>
+</head>
+
+<body>
+
+
+    <script>
+        //1st approach      
+
+        // var secondmax = function (arr) {
+        //     var arr = [20, 120, 150, 500, 100];
+        //     var max = Math.max.apply(null, arr);
+
+        //     var num = arr.splice(arr.indexOf(max), 1)
+
+        //     return Math.max.apply(null, arr); // get the 2nd max    
+
+        // }
+        // let res = secondmax();
+        // document.write((res) + '<br>')
+
+
+
+        // var arr_number = [25, 28, 30, 20, 35];
+        // var max_number = Math.max.apply(null, arr_number);
+        // //document.write(max_number);
+        // var remove_max = arr_number.splice(arr_number.indexOf(max_number), 1);
+        // var new_array = Math.max.apply(null, arr_number);
+        // document.write(new_array + '<br>');
+
+        //2nd approach      
+
+
+        var arr_number1 = [25, 28, 30, 20, 35];
+        // var max_number1 = Math.max.apply(null, arr_number);
+
+        arr_number1.sort((a,b)=>{return b-a})
+       document.write(arr_number1[1]);
+
+
+
+
+ 
+
+
+
+
+
+    </script>
+</body>
+
+</html>

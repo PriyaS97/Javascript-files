@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <div>
+            <label for='age'>Enter Age</label>
+            <input type="date" name="age" id="age" required>
+        </div>
+        <div>
+            <p id="demo"></p>
+        </div>
+        <div>
+            <button type="submit" onclick="Myfunction()">Submit</button>
+        </div>
+    </section>
+
+    <script>
+        function Myfunction() {
+        
+            var inp = parseInt(document.getElementById("age").value);
+            
+            var today = new Date();
+            var month = today.getMonth() + 1;
+            var year = today.getFullYear() - 1;
+            var day = today.getDate();
+
+            //Calculating the age 
+            var birthYear = year-inp;
+
+            document.getElementById('demo').innerHTML =  birthYear + "Years , " +  month + "Months , "+day +"Days old ";
+        }
+    </script>
+</body>
+
+</html>

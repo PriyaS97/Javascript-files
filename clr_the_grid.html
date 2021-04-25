@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .main {
+            border: 2px solid;
+            margin: auto;
+            height: 500px;
+            width: 900px;
+            display: flex;
+        }
+
+        .left-side {
+            flex: 2;
+            margin: auto;
+            margin-left: 40px;
+        }
+
+        .right-side {
+            flex: 3;
+            margin: auto
+        }
+
+        .grid {
+            border: 1px solid;
+            padding: 60px;
+            height: 0px;
+        }
+
+        .grid-main {
+            display: flex;
+        }
+
+        .ty {
+            display: block;
+            margin: 40px;
+            height: 50px;
+            text-align: center;
+        }
+
+        .btn {
+            display: block;
+            width: 100px;
+            margin-left: 70px;
+            height: 50px;
+            border-radius: 7px;
+
+        }
+
+        .one1 {
+            background-color: blue;
+        }
+
+        .two1 {
+            background-color: red;
+        }
+
+        .three1 {
+            background-color: pink;
+        }
+
+        .four1 {
+            background-color: Yellow;
+        }
+
+        .five1 {
+            background-color: Green;
+        }
+
+        .six1 {
+            background-color: Brown;
+        }
+
+        .seveen1 {
+            background-color: Azure;
+        }
+
+        .eigt1 {
+            background-color: Magenta;
+        }
+
+        .nine1 {
+            background-color: Plum;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="left-side">
+            <input class="ty" type="text" id="inNum">
+            <button type="submit" class="btn" onclick="color()">Color Me</button>
+        </div>
+        <div class="right-side">
+            <div class="grid-main">
+                <div class="grid" id="1">1</div>
+                <div class="grid" id="2">2</div>
+                <div class="grid" id="3">3</div>
+            </div>
+
+
+            <div class="grid-main">
+                <div class="grid" id="4">4</div>
+                <div class="grid" id="5">5</div>
+                <div class="grid" id="6">6</div>
+            </div>
+
+            <div class="grid-main">
+                <div class="grid" id="7">7</div>
+                <div class="grid" id="8">8</div>
+                <div class="grid" id="9">9</div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function color() {
+            let inp = document.getElementById("inNum").value;
+            let one = document.getElementById("1")
+            let two = document.getElementById("2")
+            let three = document.getElementById("3")
+            let four = document.getElementById("4")
+            let five = document.getElementById("5")
+            let six = document.getElementById("6")
+            let seveen = document.getElementById("7")
+            let eight = document.getElementById("8")
+            let nine = document.getElementById("9")
+
+         //   remove property 
+            one.classList.remove('one1');
+            two.classList.remove('two1');
+            three.classList.remove('three1');
+            four.classList.remove('four1');
+            five.classList.remove('five1');
+            six.classList.remove('six1');
+            seveen.classList.remove('seveen1');
+            eight.classList.remove('eight1');
+            nine.classList.remove('nine1');
+
+            arr = [1, 2, 3];
+
+            switch (parseInt(inp)) {
+                case 1:
+                    if (inp  == arr[0]) {
+                        //one.classList.remove('one1');
+                        one.classList.add("one1");
+                    }  
+                    else { (inp  !== arr[0]) 
+                        //one.classList.remove('one1');
+                        one.classList.remove("one1");
+                    }                    
+                    break;
+                case 2:
+                    two.classList.add("two1");
+                    break;
+                case 3:
+                    three.classList.add("three1");
+                    break;
+                case 4:
+                    four.classList.add("four1");
+                    break;
+                case 5:
+                    five.classList.add("five1");
+                    break;
+                case 6:
+                    six.classList.add("six1");
+                    break;
+                case 7:
+                    seveen.classList.add("seveen1");
+                    break;
+                case 8:
+                    eight.classList.add("eigt1");
+                    break;
+                case 9:
+                    nine.classList.add("nine1");
+                    break;
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>
+<!-- 
+.parseInt() takes a String as a first argument, and a base to which that String will be converted to. This method always returns an integer.
+.parseFloat() takes a String as an argument, and returns the Float point number equivalent.
+Unary Operator By adding a + sign before a String, it will be converted into a number if it follows the right format.
+Multiply by 1 : If a String is multiplied by the primitive number 1, the string will become a number.
+
+
+
+ -->

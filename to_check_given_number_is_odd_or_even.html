@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> to check given number is odd or even </title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <form>
+        <label for="num">Enter number</label>
+        <input type="number" id="num" name="num" required>
+        
+        <button id="sub" onclick="login(event)">Submit</button>
+        <div>
+            <span id="err"></span>
+        </div>
+    </form>
+
+    <script>
+        function login(e) {
+            e.preventDefault();
+            let number = document.getElementById('num');
+            let err = document.getElementById('err');
+            if (number.value% 2 == 0) {
+               // alert('');
+               err.innerText="given number is odd";
+            }
+            else {
+               // alert('');
+               err.innerText="given is even";
+            }
+        }
+
+    </script>
+</body>
+
+</html>

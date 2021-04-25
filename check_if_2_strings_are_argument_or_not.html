@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //check if 2 strings are anagram or not   'listen' - 'silent'    anagram(every char of str1 should be there in str2  
+
+        // let str ="listen";
+        // let str1 = "silent";
+
+        // let res= str.match(str1);
+        // document.write('res')
+
+
+        let isanagram = function (str1, str2) {
+
+            let sort1 = str1.split('').sort().join('').toLowerCase();
+            let sort2 = str2.split('').sort().join('').toLowerCase();
+            return (sort1 === sort2)
+
+        }
+        document.write(isanagram('listen', 'silent'))
+        isanagram(listen, silent);
+
+
+        document.write(' <h1>17. split without space</h1>');
+        var str25 = 'Javascript is a  Great Language';
+        var x = str25.split("");
+        document.write('split without space =' + x + '</br>');
+
+
+        // let str = 'listen';
+        // var res = str.split("");
+        // document.write("spilt = " + res + '<br>');
+        // var res1 = res.sort();
+        // document.write("sort = " + res1 + '<br>');
+
+
+        // let str1 = 'silent';
+        // var res01 = str1.split("");
+        // document.write("spilt = " + res01 + '<br>');
+        // var res02 = res01.sort();
+        // document.write("sort = " + res02 + '<br>');
+
+
+//         function  multiplication   (a, b)   {
+//             let multi = a;
+//             let multi1 = b;
+//             let res = [];
+//             for (let i= 1; i<=multi1; i++) {
+//                 res.push(multi * i);
+//             };
+//             document.write(res);
+
+//         };
+
+
+//  multiplication(7, 5);
+
+        // function anagram (str, str2) {
+
+        //     let string1 = str.split("").sort().join(). 
+        // }
+        // anagram(listen, silent)
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

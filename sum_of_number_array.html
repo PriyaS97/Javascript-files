@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sum of number in array</title>
+</head>
+<body>
+    <script>
+        //1st approach
+        var numbers=[25,65,85,100,200,55,22,99,55,77,19];
+        var sum= 0;
+        var len = numbers.length;
+        for(var i =0; i<len; i++){
+            sum+= numbers[i]
+        }
+        document.write(sum+'<br>');
+
+
+        //2nd approach
+
+        const arr=[25,65,85,100,200,55];
+        const add = (a,b) => a+b;
+        const sum1 =arr.reduce(add)
+        document.write(sum1+'<br>')
+
+        //3rd Approach 
+
+        var arr1= [25,65,85,55]
+        var sum2 = arr1.reduce((total,amount)=>total+amount);   
+        document.write(sum2+'<br>');
+
+        
+
+    </script>
+</body>
+</html>

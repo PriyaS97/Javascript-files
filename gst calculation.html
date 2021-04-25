@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>GST Calculation</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            text-align: center;
+            border-collapse: collapse;
+
+        }
+
+        table,
+        input {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form>
+        <table>
+            <thead>
+                <tr>
+                    <th>sl.no</th>
+                    <th>Product name</th>
+                    <th>Qty</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Pen</td>
+                    <td>
+                        <input type="number" id="qty" placeholder="please enter number">
+                    </td>
+                    <td>
+                        <input type="number" id="price" placeholder="please enter price">
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>bottel</td>
+                    <td>
+                        <input type="number" id="qty1" placeholder="please enter number">
+                    </td>
+                    <td>
+                        <input type="number" id="price1" placeholder="please enter price">
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2">Total_price</td>
+                    <td id="total_price" colspan="2">
+                        <p id="demo1"></p>
+                        <!--tp  -->
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">GST_price</td>
+                    <td id="gst_price" colspan="2">
+                        <p id="demo2"></p>
+                        <!--gp  -->
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">Total_gst_price</td>
+                    <td id="total_gst_price" colspan="2">
+                        <p id="demo3"></p><!-- tgp -->
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+        <button class="m-2" type="submit" onclick="validation(event)" style="width: 95%;">Submit</button>
+        <button class="m-2" type="submit" onclick="mycancel(event)" style="width: 95%;">Cancel</button>
+
+    </form>
+    <script>
+        //parseInt: parseInt() easily converts your string to a rounded integer.
+        function validation(e) {
+            e.preventDefault()
+            let qty = parseInt(document.getElementById("qty").value);
+            let price = parseInt(document.getElementById("price").value);
+            let qty1 = parseInt(document.getElementById("qty1").value);
+            let price1 = parseInt(document.getElementById("price1").value);
+
+            let total_price = parseInt(document.getElementById("total_price").value);
+            let gst_price = parseInt(document.getElementById("gst_price").value);
+            let total_gst_price = parseInt(document.getElementById("total_gst_price").value);
+
+
+            //  items calculation
+            
+            let priceQty = (qty * price) + (qty1 * price1)
+            document.getElementById("demo1").innerHTML = priceQty;
+
+            // gst calculation 
+           // let percentToGet = 18;
+            let precent =  (priceQty*18) /100;
+            //let precent1= precent*
+           // total_price * 18 / 100;
+            document.getElementById('demo2').innerHTML = precent;
+
+
+
+            // final  calculation 
+            let total = (priceQty + precent);
+            document.getElementById("demo3").innerHTML = total;
+
+        }
+        function mycancel(e){
+            e.preventDefault()
+            location.reload();
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE HTML> 
+<html> 
+<head> 
+    <title> 
+        Generate a n-digit number using JavaScript 
+    </title> 
+</head> 
+  
+<body> 
+    
+    <h1>Random number generate</h1>
+    <button onclick="Myclick()">Click</button>
+    <p id="demo"></p>
+</body> 
+  <script >
+      var num= document.getElementById('demo');
+      function Myclick(){
+        var minm=100000;
+        var maxm=999999;
+        num.innerHTML=  Math.round(Math.random() * (maxm-minm))  +minm;
+
+      }
+  </script>
+</html> 
